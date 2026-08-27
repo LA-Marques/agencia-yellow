@@ -1,30 +1,70 @@
 /* ============================================
-   AGÊNCIA YELLOW — JavaScript
+   YELLOW MARKETING DIGITAL — Haute Couture System JavaScript
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* ---------- Mobile Menu Toggle ---------- */
+  /* ---------- Mobile Menu Drawer ---------- */
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.header__nav');
 
+  function closeMobileMenu() {
+    if (toggle && nav && nav.classList.contains('open')) {
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function openMobileMenu() {
+    if (toggle && nav) {
+      toggle.classList.add('active');
+      toggle.setAttribute('aria-expanded', 'true');
+      nav.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active');
-      nav.classList.toggle('open');
-      document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (nav.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
 
-    // Close menu when a nav link is clicked
+    // Close menu when clicking nav link
     nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        toggle.classList.remove('active');
-        nav.classList.remove('open');
-        document.body.style.overflow = '';
+        closeMobileMenu();
       });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close on resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && nav.classList.contains('open')) {
+        closeMobileMenu();
+      }
     });
   }
 
-  /* ---------- Scroll Reveal ---------- */
+  /* ---------- Scroll Reveal Animations ---------- */
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!prefersReducedMotion) {
@@ -45,39 +85,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     reveals.forEach((el, i) => {
-      el.style.transitionDelay = `${i % 4 * 0.1}s`;
+      el.style.transitionDelay = `${(i % 4) * 0.1}s`;
       revealObserver.observe(el);
     });
   } else {
-    // If reduced motion, make everything visible immediately
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }
 
-  /* ---------- Header scroll effect ---------- */
+  /* ---------- Bento Box Spotlight Mouse Tracking ---------- */
+  const interactiveCards = document.querySelectorAll('.post-card, .benefit-card, .method-step, .cta-final__card, .hero__photo-card');
+  interactiveCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
+  /* ---------- Header Backdrop on Scroll ---------- */
   const header = document.querySelector('.header');
-  let lastScroll = 0;
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
-    if (currentScroll > 60) {
-      header.style.background = 'rgba(7, 7, 9, 0.96)';
-      header.style.borderBottomColor = 'rgba(123, 45, 232, 0.3)';
+    if (currentScroll > 40) {
+      header.style.background = 'rgba(9, 9, 11, 0.95)';
+      header.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+      header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.7)';
     } else {
-      header.style.background = 'rgba(7, 7, 9, 0.85)';
-      header.style.borderBottomColor = 'rgba(123, 45, 232, 0.18)';
+      header.style.background = 'rgba(9, 9, 11, 0.85)';
+      header.style.borderBottomColor = 'rgba(255, 255, 255, 0.05)';
+      header.style.boxShadow = 'none';
     }
-    lastScroll = currentScroll;
   }, { passive: true });
 
-  /* ---------- Smooth scroll for anchor links ---------- */
+  /* ---------- Smooth Scroll with Header Offset ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
-      if (targetId === '#') return;
+      if (targetId === '#' || targetId === '') return;
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        const headerOffset = 80;
+        const headerOffset = window.innerWidth <= 768 ? 72 : 80;
         const elementPosition = target.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
           top: elementPosition - headerOffset,
@@ -87,10 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- Current year in footer ---------- */
+  /* ---------- Current Year in Footer ---------- */
   const yearEl = document.getElementById('current-year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 });
-

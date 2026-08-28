@@ -4,15 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yellow Marketing Digital — Transforme seu Instagram em Vitrine</title>
-  <meta name="description" content="Yellow Marketing Digital transforma perfis de Instagram em vitrines profissionais. Gestão de conteúdo, posicionamento visual e identidade estratégica.">
-  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Yellow Marketing Digital transforma perfis de Instagram em vitrines profissionais de alta autoridade. Gestão estratégica de conteúdo, direção de arte e identidade autoral.">
+  <meta name="theme-color" content="#0D0D0D">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Yellow Marketing Digital">
+
+  <!-- Progressive Enhancement: Detect JS immediately to avoid white page -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Fallback NoScript: Keep 100% visible if JS is disabled or fails -->
+  <noscript>
+    <style>
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .header__nav {
+        display: flex !important;
+        position: static !important;
+        height: auto !important;
+        background: transparent !important;
+      }
+      .menu-toggle {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://aagenciayellow.vercel.app/">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/logo-icon.png">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Yellow Marketing Digital">
+  <meta property="og:title" content="Yellow Marketing Digital — Transforme seu Instagram em Vitrine">
+  <meta property="og:description" content="Gestão estratégica de Instagram, posicionamento visual autoral e conteúdo magnético para marcas e profissionais que desejam gerar autoridade e vendas.">
+  <meta property="og:url" content="https://aagenciayellow.vercel.app/">
+  <meta property="og:image" content="https://aagenciayellow.vercel.app/assets/images/hero-social.png">
+  <meta property="og:image:width" content="651">
+  <meta property="og:image:height" content="703">
+  <meta property="og:image:alt" content="Posicionamento e gestão de mídias sociais — Yellow Marketing Digital">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yellow Marketing Digital — Transforme seu Instagram em Vitrine">
+  <meta name="twitter:description" content="Gestão estratégica de Instagram, posicionamento visual autoral e conteúdo magnético para marcas e profissionais.">
+  <meta name="twitter:image" content="https://aagenciayellow.vercel.app/assets/images/hero-social.png">
+
+  <!-- Structured Data (JSON-LD) for SEO / AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Yellow Marketing Digital",
+    "url": "https://aagenciayellow.vercel.app/",
+    "logo": "https://aagenciayellow.vercel.app/assets/images/logo-icon.png",
+    "image": "https://aagenciayellow.vercel.app/assets/images/hero-social.png",
+    "description": "Agência de marketing digital especializada em gestão de redes sociais, posicionamento visual e estratégia de conteúdo para Instagram.",
+    "telephone": "+55-43-9937-5259",
+    "sameAs": [
+      "https://www.instagram.com/aagenciayellow/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
 
   <!-- Editorial Typography: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=4.1">
+  <link rel="stylesheet" href="styles.css?v=11.0">
 </head>
 <body>
 
@@ -20,20 +92,21 @@
   <header class="header" role="banner">
     <div class="container header__inner">
       <a href="#inicio" class="header__logo" aria-label="Yellow Marketing Digital — página inicial">
-        <img src="assets/images/logo-icon.png" alt="Yellow Lâmpada" width="36" height="42" class="header__logo-img">
+        <img src="./assets/images/logo-icon.png" onerror="this.onerror=null; this.src='./logo-icon.png';" alt="Yellow Lâmpada" width="36" height="42" class="header__logo-img">
         <span class="header__logo-text">Yellow</span>
       </a>
 
-      <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+      <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="primary-navigation">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="header__nav" role="navigation" aria-label="Navegação principal">
+      <nav id="primary-navigation" class="header__nav" role="navigation" aria-label="Navegação principal">
         <a href="#inicio">Início</a>
-        <a href="#cases">Cases</a>
+        <a href="#cases">Feeds de Clientes</a>
+        <a href="#beneficios">Diferenciais</a>
         <a href="#metodo">Método</a>
         <a href="#contato">Contato</a>
-        <a href="https://wa.me/554399375259?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Yellow%20e%20quero%20conhecer%20os%20servi%C3%A7os!" target="_blank" rel="noopener noreferrer" class="btn btn-yellow btn-sm header__cta" style="color: #09090b !important;">
+        <a href="https://wa.me/554399375259?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Yellow%20e%20quero%20conhecer%20os%20servi%C3%A7os!" target="_blank" rel="noopener noreferrer" class="btn btn-yellow btn-sm header__cta">
           Falar com a Yellow
         </a>
       </nav>
@@ -52,21 +125,21 @@
           Seu Instagram pode ser a <span class="text-yellow">vitrine</span> que sua marca <span class="text-purple">merece.</span>
         </h1>
         <p class="hero__subtitle">
-          Transformamos presença digital em posicionamento visual e conteúdo consistente. Identidade autoral, estratégia e criatividade para perfis que geram confiança e clientes.
+          Transformamos presença digital em posicionamento visual e conteúdo consistente. Identidade autoral, estratégia e direção de arte para perfis que geram confiança imediata e novos clientes.
         </p>
         <div class="hero__actions">
-          <a href="https://wa.me/554399375259?text=Ol%C3%A1%21%20Quero%20transformar%20meu%20perfil%20no%20Instagram%20com%20a%20Yellow." target="_blank" rel="noopener noreferrer" class="btn btn-yellow" style="color: #09090b !important;">
+          <a href="https://wa.me/554399375259?text=Ol%C3%A1%21%20Quero%20transformar%20meu%20perfil%20no%20Instagram%20com%20a%20Yellow." target="_blank" rel="noopener noreferrer" class="btn btn-yellow">
             <!-- WhatsApp Icon -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Quero transformar meu perfil
           </a>
           <a href="#cases" class="btn btn-outline">
-            Ver antes e depois
+            Ver feeds de clientes
           </a>
         </div>
       </div>
 
-      <!-- Hero Visual Showcase: Mulher com Fundo Off-Black -->
+      <!-- Hero Visual Showcase -->
       <div class="hero__visual reveal">
         <div class="hero__showcase">
           <!-- Floating Editorial Badge Top -->
@@ -80,7 +153,7 @@
 
           <!-- Featured Photo Card with Bento Glass Border -->
           <div class="hero__photo-card">
-            <img src="assets/images/hero-social.png" alt="Posicionamento e gestão de mídias sociais — Yellow Marketing Digital" class="hero__woman-img" width="651" height="703" loading="eager">
+            <img src="./assets/images/hero-social.png" onerror="this.onerror=null; this.src='./hero-social.png';" alt="Posicionamento e gestão de mídias sociais — Yellow Marketing Digital" class="hero__woman-img" width="651" height="703" loading="eager">
           </div>
 
           <!-- Floating Editorial Badge Bottom -->
@@ -96,200 +169,112 @@
     </div>
   </section>
 
-  <!-- ====== CASES — ANTES E DEPOIS (BENTO GRID ASSIMÉTRICO) ====== -->
-  <section id="cases" class="cases">
+  <!-- ====== FEEDS DE CLIENTES REAIS (PORTFÓLIO YELLOW) ====== -->
+  <section id="cases" class="feeds-showcase">
     <div class="container">
-      <div class="section-header reveal">
-        <div class="section-tag micro-tag">RESULTADOS REAIS</div>
-        <h2 class="section-title">Antes e depois do <span class="text-yellow">gerenciamento</span></h2>
-        <p class="section-subtitle">
-          Veja como perfis reais foram transformados com identidade, estratégia editorial e consistência visual.
+      <!-- Título da Seção Alinhado à Esquerda -->
+      <div class="feeds-showcase__header reveal">
+        <div class="section-tag micro-tag">
+          <span class="pulse-dot"></span>
+          PORTFÓLIO & FEEDS ATUAIS
+        </div>
+        <h2 class="feeds-showcase__title">
+          Feeds reais geridos pela <span class="text-yellow">Yellow.</span>
+        </h2>
+        <p class="feeds-showcase__subtitle">
+          Transformamos perfis em vitrines magnéticas de alta autoridade e captação contínua. Veja como estruturamos a identidade visual, direção de arte e estratégia de conteúdo para nossos clientes:
         </p>
       </div>
 
-      <!-- Desktop Bento Grid Assimétrico -->
-      <div class="cases__grid">
-        <!-- Case 01 — Featured Wide Card (Span 7) -->
-        <article class="post-card post-card--wide reveal" aria-label="Case antes e depois — @dracelimorganti">
-          <div class="post-card__header">
-            <div class="post-card__user">
-              <div class="post-card__avatar">AY</div>
-              <div>
-                <div class="post-card__name">@dracelimorganti</div>
-                <span class="micro-tag post-card__category">MÉDICA & ESTÉTICA</span>
-              </div>
+      <!-- Grid de Feeds dos Clientes (3 Colunas) -->
+      <div class="feeds-grid">
+        <!-- 1. Dra. Tairine Rossin (Odontologia) -->
+        <article class="feed-card reveal" aria-label="Feed Dra. Tairine Rossin no Instagram">
+          <div class="feed-card__header">
+            <div class="feed-card__profile">
+              <span class="feed-card__dot"></span>
+              <a href="https://www.instagram.com/tairinerossin.dentista/" target="_blank" rel="noopener noreferrer" class="feed-card__handle">
+                @tairinerossin.dentista
+              </a>
             </div>
-            <span class="post-card__badge micro-tag">ANTES & DEPOIS</span>
+            <span class="feed-card__badge">Odontologia</span>
           </div>
-          <div class="post-card__image">
-            <img src="assets/images/case-01.jpg" alt="Transformação do perfil @dracelimorganti — feed com identidade visual médica refinada" width="700" height="500" loading="lazy">
+
+          <div class="feed-card__media">
+            <img src="./assets/images/feed-tairine.jpg" onerror="this.onerror=null; this.src='./feed-tairine.jpg';" alt="Feed Instagram Dra. Tairine Rossin — Odontopediatria e Estética" width="584" height="1024" loading="lazy">
           </div>
-          <div class="post-card__caption">
-            <div class="post-card__caption-title">Harmonização Facial & Autoridade Clínica</div>
-            <div class="post-card__caption-text">Identidade limpa, publicações estruturadas e consistência visual que transmite precisão técnica e segurança imediata para novas consultas.</div>
+
+          <div class="feed-card__content">
+            <h3 class="feed-card__title">Dra. Tairine Rossin</h3>
+            <p class="feed-card__desc">Odontopediatria e estética odontológica. Feed humanizado com direção visual acolhedora e educativa que constrói conexão direta com famílias e valoriza o consultório.</p>
+            <a href="https://www.instagram.com/tairinerossin.dentista/" target="_blank" rel="noopener noreferrer" class="feed-card__link">
+              Ver perfil no Instagram
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
           </div>
         </article>
 
-        <!-- Case 02 — Standard Card (Span 5) -->
-        <article class="post-card reveal" aria-label="Case antes e depois — @clinicaclaudiakamm">
-          <div class="post-card__header">
-            <div class="post-card__user">
-              <div class="post-card__avatar">AY</div>
-              <div>
-                <div class="post-card__name">@clinicaclaudiakamm</div>
-                <span class="micro-tag post-card__category">CLÍNICA MÉDICA</span>
-              </div>
+        <!-- 2. Dra. Maria Carolina (Medicina / Homeopatia) -->
+        <article class="feed-card reveal" aria-label="Feed Dra. Maria Carolina no Instagram">
+          <div class="feed-card__header">
+            <div class="feed-card__profile">
+              <span class="feed-card__dot"></span>
+              <a href="https://www.instagram.com/dramariacarolina.homeopatia/" target="_blank" rel="noopener noreferrer" class="feed-card__handle">
+                @dramariacarolina.homeopatia
+              </a>
             </div>
-            <span class="post-card__badge micro-tag">ANTES & DEPOIS</span>
+            <span class="feed-card__badge">Medicina</span>
           </div>
-          <div class="post-card__image">
-            <img src="assets/images/case-02.jpg" alt="Transformação do perfil @clinicaclaudiakamm — feed profissional com paleta de cores consistente" width="400" height="500" loading="lazy">
+
+          <div class="feed-card__media">
+            <img src="./assets/images/feed-mariacarolina.jpg" onerror="this.onerror=null; this.src='./feed-mariacarolina.jpg';" alt="Feed Instagram Dra. Maria Carolina — Medicina Integrativa e Homeopatia" width="581" height="1024" loading="lazy">
           </div>
-          <div class="post-card__caption">
-            <div class="post-card__caption-title">Clínica & Estética Avançada</div>
-            <div class="post-card__caption-text">Direção criativa de alta fidelidade, paleta madura e organização impecável da grade.</div>
+
+          <div class="feed-card__content">
+            <h3 class="feed-card__title">Dra. Maria Carolina</h3>
+            <p class="feed-card__desc">Medicina Integrativa e Homeopatia. Paleta calorosa, tipografia editorial e narrativa médica que gera respeito técnico e atrai pacientes particulares qualificados.</p>
+            <a href="https://www.instagram.com/dramariacarolina.homeopatia/" target="_blank" rel="noopener noreferrer" class="feed-card__link">
+              Ver perfil no Instagram
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
           </div>
         </article>
 
-        <!-- Case 03 — Standard Card (Span 5) -->
-        <article class="post-card reveal" aria-label="Case antes e depois — @renatatobias.seguros">
-          <div class="post-card__header">
-            <div class="post-card__user">
-              <div class="post-card__avatar">AY</div>
-              <div>
-                <div class="post-card__name">@renatatobias.seguros</div>
-                <span class="micro-tag post-card__category">FINANÇAS & SEGUROS</span>
-              </div>
+        <!-- 3. Aliny Decorações (Decoração & Eventos) -->
+        <article class="feed-card reveal" aria-label="Feed Aliny Decorações no Instagram">
+          <div class="feed-card__header">
+            <div class="feed-card__profile">
+              <span class="feed-card__dot"></span>
+              <a href="https://www.instagram.com/alinydecoracoes/" target="_blank" rel="noopener noreferrer" class="feed-card__handle">
+                @alinydecoracoes
+              </a>
             </div>
-            <span class="post-card__badge micro-tag">ANTES & DEPOIS</span>
+            <span class="feed-card__badge">Decoração & Eventos</span>
           </div>
-          <div class="post-card__image">
-            <img src="assets/images/case-03.jpg" alt="Transformação do perfil @renatatobias.seguros — posicionamento visual profissional no nicho de seguros" width="400" height="500" loading="lazy">
+
+          <div class="feed-card__media">
+            <img src="./assets/images/feed-alinydecoracoes.jpg" onerror="this.onerror=null; this.src='./feed-alinydecoracoes.jpg';" alt="Feed Instagram Aliny Decorações — Flores e Eventos" width="580" height="1024" loading="lazy">
           </div>
-          <div class="post-card__caption">
-            <div class="post-card__caption-title">Seguros & Gestão Patrimonial</div>
-            <div class="post-card__caption-text">Comunicação clara e design executivo para transformar seguidores em clientes qualificados.</div>
+
+          <div class="feed-card__content">
+            <h3 class="feed-card__title">Aliny Decorações</h3>
+            <p class="feed-card__desc">Flores e ambientação de celebrações. Vitrine sensorial com enquadramentos sofisticados e acabamento visual de alto padrão para eventos inesquecíveis.</p>
+            <a href="https://www.instagram.com/alinydecoracoes/" target="_blank" rel="noopener noreferrer" class="feed-card__link">
+              Ver perfil no Instagram
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
           </div>
         </article>
-
-        <!-- Case 04 — Featured Wide Card (Span 7) -->
-        <article class="post-card post-card--wide reveal" aria-label="Case antes e depois — @nutri.caru">
-          <div class="post-card__header">
-            <div class="post-card__user">
-              <div class="post-card__avatar">AY</div>
-              <div>
-                <div class="post-card__name">@nutri.caru</div>
-                <span class="micro-tag post-card__category">NUTRIÇÃO CLÍNICA</span>
-              </div>
-            </div>
-            <span class="post-card__badge micro-tag">ANTES & DEPOIS</span>
-          </div>
-          <div class="post-card__image">
-            <img src="assets/images/case-04.jpg" alt="Transformação do perfil @nutri.caru — identidade visual coesa no nicho de nutrição" width="700" height="500" loading="lazy">
-          </div>
-          <div class="post-card__caption">
-            <div class="post-card__caption-title">Nutrição, Saúde & Humanização</div>
-            <div class="post-card__caption-text">Alinhamento autoral com a essência da profissional. Grade harmonizada para educar, gerar identificação e atrair pacientes particulares.</div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Mobile Carousel -->
-      <div class="cases__carousel" role="region" aria-label="Carrossel de cases antes e depois">
-        <article class="post-card">
-          <div class="post-card__header">
-            <div class="post-card__user">
-              <div class="post-card__avatar">AY</div>
-              <div>
-                <div class="post-card__name">@dracelimorganti</div>
-                <span class="micro-tag post-card__category">MÉDICA</span>
-              </div>
-            </div>
-            <span class="post-card__badge micro-tag">ANTES & DEPOIS</span>
-          </div>
-          <div class="post-card__image">
-            <img src="assets/images/case-01.jpg" alt="Transformação do perfil @dracelimorganti" width="400" height="500" loading="lazy">
-          </div>
-          <div class="post-card__caption">
-            <div class="post-card__caption-title">Harmonização & Autoridade</div>
-            <div class="post-card__caption-text">Identidade limpa e consistência visual que transmite segurança.</div>
-          </div>
-        </article>
-
-        <article class="post-card">
-          <div class="post-card__header">
-            <div class="post-card__user">
-              <div class="post-card__avatar">AY</div>
-              <div>
-                <div class="post-card__name">@clinicaclaudiakamm</div>
-                <span class="micro-tag post-card__category">CLÍNICA</span>
-              </div>
-            </div>
-            <span class="post-card__badge micro-tag">ANTES & DEPOIS</span>
-          </div>
-          <div class="post-card__image">
-            <img src="assets/images/case-02.jpg" alt="Transformação do perfil @clinicaclaudiakamm" width="400" height="500" loading="lazy">
-          </div>
-          <div class="post-card__caption">
-            <div class="post-card__caption-title">Clínica & Estética</div>
-            <div class="post-card__caption-text">Conteúdo com direção criativa e organização da grade.</div>
-          </div>
-        </article>
-
-        <article class="post-card">
-          <div class="post-card__header">
-            <div class="post-card__user">
-              <div class="post-card__avatar">AY</div>
-              <div>
-                <div class="post-card__name">@renatatobias.seguros</div>
-                <span class="micro-tag post-card__category">FINANÇAS</span>
-              </div>
-            </div>
-            <span class="post-card__badge micro-tag">ANTES & DEPOIS</span>
-          </div>
-          <div class="post-card__image">
-            <img src="assets/images/case-03.jpg" alt="Transformação do perfil @renatatobias.seguros" width="400" height="500" loading="lazy">
-          </div>
-          <div class="post-card__caption">
-            <div class="post-card__caption-title">Seguros & Finanças</div>
-            <div class="post-card__caption-text">Comunicação estratégica e design de alto impacto.</div>
-          </div>
-        </article>
-
-        <article class="post-card">
-          <div class="post-card__header">
-            <div class="post-card__user">
-              <div class="post-card__avatar">AY</div>
-              <div>
-                <div class="post-card__name">@nutri.caru</div>
-                <span class="micro-tag post-card__category">NUTRIÇÃO</span>
-              </div>
-            </div>
-            <span class="post-card__badge micro-tag">ANTES & DEPOIS</span>
-          </div>
-          <div class="post-card__image">
-            <img src="assets/images/case-04.jpg" alt="Transformação do perfil @nutri.caru" width="400" height="500" loading="lazy">
-          </div>
-          <div class="post-card__caption">
-            <div class="post-card__caption-title">Nutrição & Saúde</div>
-            <div class="post-card__caption-text">Feed humanizado com identidade autoral e conteúdo alinhado.</div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Mobile swipe hint -->
-      <div class="cases__swipe-hint" aria-hidden="true">
-        <span class="micro-tag">← DESLIZE PARA VER TODOS OS CASES →</span>
       </div>
     </div>
   </section>
 
-  <!-- ====== BENEFITS (BENTO GRID ASSIMÉTRICO) ====== -->
-  <section class="benefits">
+  <!-- ====== BENEFITS (PILARES ESTRATÉGICOS) ====== -->
+  <section id="beneficios" class="benefits">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-tag micro-tag">TRANSFORMAÇÃO ESTRATÉGICA</div>
-        <h2 class="section-title">O que muda quando existe <span class="text-yellow">estratégia</span></h2>
+        <div class="section-tag micro-tag">PILARES DE POSICIONAMENTO</div>
+        <h2 class="section-title">Por que nossa abordagem <span class="text-yellow">converte.</span></h2>
         <p class="section-subtitle">
           Um perfil bem posicionado não depende de algoritmos instáveis: ele constrói percepção de valor e autoridade imediata.
         </p>
@@ -304,8 +289,8 @@
             </div>
             <span class="micro-tag benefit-card__number">01 / IDENTIDADE AUTORAL</span>
           </div>
-          <h3 class="benefit-card__title">Identidade que chama atenção e diferencia</h3>
-          <p class="benefit-card__text">Um feed com personalidade magnética, cores proprietárias e linguagem visual que corta o ruído da timeline e posiciona sua marca como referência no primeiro segundo de visualização.</p>
+          <h3 class="benefit-card__title">Diferenciação visual instantânea na timeline</h3>
+          <p class="benefit-card__text">Criamos universos visuais proprietários com paletas equilibradas, tipografia marcante e acabamento editorial. Seu perfil se destaca imediatamente em meio ao mar de conteúdos genéricos.</p>
         </div>
 
         <!-- Benefit 02 — Standard Card (Span 5) -->
@@ -316,8 +301,8 @@
             </div>
             <span class="micro-tag benefit-card__number">02 / PLANEJAMENTO</span>
           </div>
-          <h3 class="benefit-card__title">Conteúdo com intenção</h3>
-          <p class="benefit-card__text">Cada post tem um propósito bem delineado: educar, reter e conduzir o seguidor ao contato comercial sem improvisos.</p>
+          <h3 class="benefit-card__title">Conteúdo com intenção clara</h3>
+          <p class="benefit-card__text">Cada publicação tem um propósito bem delineado: atrair o público ideal, educar sobre sua especialidade e conduzir à conversão sem improvisos.</p>
         </div>
 
         <!-- Benefit 03 — Standard Card (Span 5) -->
@@ -328,8 +313,8 @@
             </div>
             <span class="micro-tag benefit-card__number">03 / ARQUITETURA</span>
           </div>
-          <h3 class="benefit-card__title">Perfil organizado e profissional</h3>
-          <p class="benefit-card__text">Destaques pensados como funil, bio clara e grid harmônico que transformam visitantes casuais em clientes ativos.</p>
+          <h3 class="benefit-card__title">Perfil estruturado como funil</h3>
+          <p class="benefit-card__text">Destaques estratégicos, biografia persuasiva e grade harmônica que funcionam 24 horas por dia como sua principal página de vendas.</p>
         </div>
 
         <!-- Benefit 04 — Wide Card (Span 7) -->
@@ -364,7 +349,7 @@
           <div class="method-step__number">01</div>
           <div class="method-step__content">
             <span class="micro-tag method-step__tag">FASE INICIAL</span>
-            <h3 class="method-step__title">Diagnóstico</h3>
+            <h3 class="method-step__title">Diagnóstico Estratégico</h3>
             <p class="method-step__text">Analisamos seu perfil atual, público-alvo, concorrência e posicionamento de mercado. Identificamos gargalos visuais e estabelecemos metas claras de percepção e autoridade.</p>
           </div>
         </div>
@@ -375,7 +360,7 @@
           <div class="method-step__content">
             <span class="micro-tag method-step__tag">BRANDING</span>
             <h3 class="method-step__title">Direção Criativa</h3>
-            <p class="method-step__text">Definição minuciosa de paleta de cores, tipografia, referências estéticas e tom de voz autoral para diferenciar sua presença.</p>
+            <p class="method-step__text">Definição minuciosa de paleta de cores, tipografia, referências estéticas e tom de voz autoral para diferenciar sua presença de concorrentes diretos.</p>
           </div>
         </div>
 
@@ -385,7 +370,7 @@
           <div class="method-step__content">
             <span class="micro-tag method-step__tag">PRODUÇÃO</span>
             <h3 class="method-step__title">Conteúdo Estratégico</h3>
-            <p class="method-step__text">Diagramação de publicações com intenção editorial definida: atrair o público ideal, educar e conduzir à conversão.</p>
+            <p class="method-step__text">Diagramação de publicações com intenção editorial definida: atrair o público ideal, educar e conduzir à conversão de forma consistente.</p>
           </div>
         </div>
 
@@ -411,10 +396,10 @@
           Sua marca merece ser <span class="text-yellow">lembrada.</span>
         </h2>
         <p class="cta-final__sub">
-          Chega de postar sem estratégia. Fale conosco agora mesmo e transforme seu Instagram em uma vitrine de alto valor.
+          Chega de postar sem estratégia. Fale com a Yellow agora mesmo e transforme seu Instagram em uma vitrine magnética de alto valor.
         </p>
         <div class="cta-final__buttons">
-          <a href="https://wa.me/554399375259?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20conversar%20sobre%20a%20gest%C3%A3o%20do%20meu%20Instagram!" target="_blank" rel="noopener noreferrer" class="btn btn-yellow" style="color: #09090b !important;">
+          <a href="https://wa.me/554399375259?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20conversar%20sobre%20a%20gest%C3%A3o%20do%20meu%20Instagram!" target="_blank" rel="noopener noreferrer" class="btn btn-yellow">
             <!-- WhatsApp Icon -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chamar no WhatsApp
@@ -433,7 +418,7 @@
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__logo">
-        <img src="assets/images/logo-icon.png" alt="Yellow Lâmpada" width="26" height="30" class="footer__logo-img">
+        <img src="./assets/images/logo-icon.png" onerror="this.onerror=null; this.src='./logo-icon.png';" alt="Yellow Lâmpada" width="26" height="30" class="footer__logo-img">
         <span>Yellow</span>
       </div>
 
@@ -459,6 +444,6 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="script.js?v=4.0"></script>
+  <script src="script.js?v=11.0"></script>
 </body>
 </html>

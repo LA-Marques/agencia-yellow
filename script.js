@@ -1,5 +1,11 @@
 /* ============================================
-   YELLOW MARKETING DIGITAL — Haute Couture System JavaScript
+   YELLOW MARKETING DIGITAL — Interactive Studio JS
+   Features:
+   - Bento Cards Mouse Spotlight Tracking
+   - Fluid Mobile Drawer Navigation
+   - Scroll Reveal Animations
+   - Anchor Navigation with Dynamic Header Offset
+   - Dynamic Current Year in Footer
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,28 +41,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close menu when clicking nav link
     nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         closeMobileMenu();
       });
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
         closeMobileMenu();
       }
     });
 
-    // Close menu on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && nav.classList.contains('open')) {
         closeMobileMenu();
       }
     });
 
-    // Close on resize to desktop
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768 && nav.classList.contains('open')) {
         closeMobileMenu();
@@ -67,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Scroll Reveal Animations ---------- */
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (!prefersReducedMotion) {
+  if ('IntersectionObserver' in window && !prefersReducedMotion) {
     const reveals = document.querySelectorAll('.reveal');
     const observerOptions = {
       root: null,
-      rootMargin: '0px 0px -60px 0px',
-      threshold: 0.12
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1
     };
 
     const revealObserver = new IntersectionObserver((entries) => {
@@ -85,15 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     reveals.forEach((el, i) => {
-      el.style.transitionDelay = `${(i % 4) * 0.1}s`;
+      el.style.transitionDelay = `${(i % 4) * 0.08}s`;
       revealObserver.observe(el);
     });
   } else {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }
 
-  /* ---------- Bento Box Spotlight Mouse Tracking ---------- */
-  const interactiveCards = document.querySelectorAll('.post-card, .benefit-card, .method-step, .cta-final__card, .hero__photo-card');
+  /* ---------- Feed Cards & Bento Interactive Spotlight Tracking ---------- */
+  const interactiveCards = document.querySelectorAll('.feed-card, .benefit-card, .method-step, .cta-final__card, .hero__photo-card');
   interactiveCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
@@ -104,23 +106,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- Header Backdrop on Scroll ---------- */
+  /* ---------- Header Scroll Backdrop ---------- */
   const header = document.querySelector('.header');
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
     if (currentScroll > 40) {
-      header.style.background = 'rgba(9, 9, 11, 0.95)';
+      header.style.background = 'rgba(13, 13, 13, 0.96)';
       header.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
       header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.7)';
     } else {
-      header.style.background = 'rgba(9, 9, 11, 0.85)';
-      header.style.borderBottomColor = 'rgba(255, 255, 255, 0.05)';
+      header.style.background = 'rgba(13, 13, 13, 0.85)';
+      header.style.borderBottomColor = 'rgba(255, 255, 255, 0.06)';
       header.style.boxShadow = 'none';
     }
   }, { passive: true });
 
-  /* ---------- Smooth Scroll with Header Offset ---------- */
+  /* ---------- Smooth Scroll with Dynamic Header Offset ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
@@ -138,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- Current Year in Footer ---------- */
+  /* ---------- Dynamic Year in Footer ---------- */
   const yearEl = document.getElementById('current-year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();

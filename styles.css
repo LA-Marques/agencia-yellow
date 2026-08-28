@@ -990,6 +990,103 @@ a.btn-yellow:active,
   color: var(--method-text); /* Purple Step Text */
 }
 
+/* ---------- FAQ Section (SEO & GEO Content Booster) ---------- */
+.faq {
+  padding: 160px 0;
+  background: var(--bg-main);
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.faq__container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 56px;
+}
+
+.faq__item {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.35s var(--ease-luxury), background 0.35s var(--ease-luxury);
+}
+
+.faq__item[open] {
+  border-color: rgba(124, 58, 237, 0.45);
+  background: rgba(124, 58, 237, 0.035);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(124, 58, 237, 0.1);
+}
+
+.faq__question {
+  padding: 24px 28px;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: color 0.3s ease;
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question:hover {
+  color: var(--yellow);
+}
+
+.faq__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--yellow);
+  transition: transform 0.35s var(--ease-luxury), background 0.35s ease, color 0.35s ease;
+}
+
+.faq__item[open] .faq__icon {
+  transform: rotate(45deg);
+  background: var(--yellow);
+  color: #0D0D0D;
+}
+
+/* Resposta com cor exclusiva (Lavanda suave da paleta Yellow) para máxima distinção */
+.faq__answer {
+  padding: 0 28px 26px;
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  line-height: 1.82;
+  color: #DDD6FE; /* Lavanda luminoso de alto contraste */
+  border-top: 1px solid rgba(124, 58, 237, 0.18);
+  padding-top: 18px;
+}
+
+.faq__answer p {
+  color: #DDD6FE;
+}
+
+.faq__answer strong {
+  color: #FFFFFF;
+}
+
 /* ---------- Final CTA Section ---------- */
 .cta-final {
   padding: 180px 0;
@@ -1080,6 +1177,23 @@ a.btn-yellow:active,
 .footer__logo-img {
   height: 28px;
   width: auto;
+}
+
+.footer__location {
+  display: flex;
+  align-items: center;
+}
+
+.footer__geo-badge {
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer__links {
@@ -1406,6 +1520,21 @@ a.btn-yellow:active,
 
   .method-step__number {
     font-size: 2.6rem;
+  }
+
+  /* FAQ Mobile */
+  .faq {
+    padding: 90px 0;
+  }
+
+  .faq__question {
+    padding: 20px 20px;
+    font-size: 1.02rem;
+  }
+
+  .faq__answer {
+    padding: 0 20px 22px;
+    font-size: 0.9rem;
   }
 
   /* Final CTA Mobile */
